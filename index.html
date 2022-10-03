@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .clock {
+      width: fit-content;
+      margin: 5px auto;
+      padding: 10px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+      font-weight: 900;
+      color: #000;
+      background-color: inherit;
+      border-bottom: 1px solid #000;
+      text-align: center;
+    }
+
+    .container {
+      margin: 0 auto;
+      max-width: 600px;
+      height: 600px;
+      background-color: rgb(110, 202, 172);
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: flex-start;
+      align-items: center;
+      border-radius: 30px;
+    }
+
+    h1 {
+      display: block;
+      width: 50%;
+      padding: 10px;
+      text-align: center;
+      font-size: 40px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      /* border-bottom: 2px solid #000; */
+      border-top: 3px solid #000;
+      border-radius: 10px;
+    }
+
+    h1::first-letter {
+      color: rgb(221, 2, 2);
+    }
+
+    .timer {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .timer__display p {
+      display: flex;
+      width: 250px;
+      height: 70px;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      font-weight: 600;
+      background-color: rgb(255, 220, 103);
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .timer__control {
+      padding: 35px;
+      width: 200px;
+      border-bottom: 3px solid #000;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-flow: row wrap;
+    }
+
+    .timer__control button {
+      margin: 5px;
+      padding: 5px;
+      text-align: center;
+      font-size: 18px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      width: 75px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: 0.2s;
+      background-color: rgb(207, 176, 187);
+    }
+
+    button:hover {
+      background-color: rgb(179, 179, 179);
+    }
+
+    button:active {
+      transform: scaleY(0.9);
+      box-shadow: 0 0 5px;
+    }
+
+    .timer__control .green {
+      background-color: rgb(0, 170, 0);
+    }
+
+    .timer__control .red {
+      background-color: red;
+    }
+
+    .timer__control .orange {
+      background-color: orange;
+    }
+  </style>
+  <script src="./script.js" type="module"></script>
+  <title>hw-14</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Timer</h1>
+    <div class="timer">
+      <div class="timer__display">
+        <p><span class="sec">00</span>sec</p>
+      </div>
+      <div class="timer__control">
+        <button class="start" type="button">Start</button>
+        <button class="pause" type="button">Pause</button>
+        <button class="reset" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
